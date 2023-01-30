@@ -72,6 +72,7 @@ enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/citra-emulator/citra-emulator/"
 
 [Backdrops]
+app-name = "Backdrops"
 enabled = true
 included-patches = "compact-header predictive-back-gesture remove-screenshot-restriction"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers/"
