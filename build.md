@@ -18,7 +18,6 @@ Reddit: 2022.43.0
 Twitch: 14.4.0  
 TikTok: 27.8.3  
 Backdrops (any): 5.0.7  
-NovaLauncher: 7.0.57  
 
 Install [Vanced Microg](https://github.com/TeamVanced/VancedMicroG/releases) to be able to use non-root YouTube or Music  
 
