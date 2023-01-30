@@ -208,7 +208,6 @@ patch_apk() {
 }
 
 zip_module() {
-	pr "Packing module ($app_name)"
 	local patched_apk=$1 module_name=$2 stock_apk=$3 pkg_name=$4 template_dir=$5
 	cp -f "$patched_apk" "${template_dir}/base.apk"
 	cp -f "$stock_apk" "${template_dir}/${pkg_name}.apk"
@@ -272,6 +271,8 @@ build_rv() {
 				apkmirror_regex='arm64-v8a</div>[^@]*@\([^"]*\)'
 			elif [ "$arch" = "arm-v7a" ]; then
 				apkmirror_regex='armeabi-v7a</div>[^@]*@\([^"]*\)'
+			elif [ "$arch" = "any" ]; then
+				apkmirror_regex='arm64-v8a + x86 + x86_64</div>[^@]*@\([^"]*\)'
 			fi
 			if ! dl_apkmirror "${args[apkmirror_dlurl]}" "$version" "$apkmirror_regex" "$stock_apk"; then
 				abort "ERROR: Could not find any release of '${app_name}' with version '${version}' from APKMirror"
@@ -356,6 +357,7 @@ build_rv() {
 			"$base_template"
 
 		local module_output="${app_name_l}-${RV_BRAND_F}-magisk-v${version}-${arch}.zip"
+		pr "Packing module ($app_name)"
 		if [ ! -f "$module_output" ] || [ "$REBUILD" = true ]; then
 			zip_module "$patched_apk" "$module_output" "$stock_apk" "$pkg_name" "$base_template"
 		fi
