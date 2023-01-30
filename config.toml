@@ -10,7 +10,7 @@ build-mindetach-module = false
 enabled = true
 build-mode = "apk" # 'both', 'apk' or 'module'
 excluded-patches = "custom-branding remove-player-button-background" # whitespace seperated list of patches to exclude (multiline strings are not supported)
-included-patches = "predictive-back-gesture remove-screenshot-restriction" # whitespace seperated list of patches to include
+included-patches = "" # whitespace seperated list of patches to include
 version = "auto" # 'auto', 'latest' or a custom one like '17.40.41'
 exclusive-patches = false # excludes all patches by default
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
@@ -20,7 +20,7 @@ module-prop-name = "ytrv-magisk"
 build-mode = "apk"
 app-name = "Music"
 excluded-patches = ""
-included-patches = "compact-header predictive-back-gesture remove-screenshot-restriction"
+included-patches = "compact-header"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music/"
 module-prop-name = "ytmusicrv-magisk"
@@ -40,7 +40,6 @@ arch = "arm-v7a"
 [Twitter]
 build-mode = "apk"
 excluded-patches = "hide-views-stats"
-included-patches = "predictive-back-gesture remove-screenshot-restriction"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitter-inc/twitter/"
 
@@ -51,7 +50,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
 
 [Twitch]
 build-mode = "apk"
-included-patches = "debug-mode predictive-back-gesture remove-screenshot-restriction"
+included-patches = "debug-mode"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
 
@@ -73,7 +72,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/citra-emulator/citra-emulator/"
 [Backdrops]
 app-name = "Backdrops"
 enabled = true
-included-patches = "predictive-back-gesture remove-screenshot-restriction"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers/"
 arch = "any"
 
@@ -106,5 +104,4 @@ enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/joaomgcd/tasker/"
 
 [Nova Launcher]
-included-patches = "predictive-back-gesture remove-screenshot-restriction"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/teslacoil-software/nova-launcher/"
