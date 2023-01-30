@@ -104,4 +104,5 @@ enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/joaomgcd/tasker/"
 
 [Nova Launcher]
+enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/teslacoil-software/nova-launcher/"
