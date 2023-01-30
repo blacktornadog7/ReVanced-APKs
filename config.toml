@@ -40,24 +40,24 @@ arch = "arm-v7a"
 [Twitter]
 build-mode = "apk"
 excluded-patches = "hide-views-stats"
-included-patches = "compact-header predictive-back-gesture remove-screenshot-restriction"
+included-patches = "predictive-back-gesture remove-screenshot-restriction"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitter-inc/twitter/"
 
 [Reddit]
 build-mode = "apk"
-included-patches = ""
+included-patches = "predictive-back-gesture remove-screenshot-restriction"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
 
 [Twitch]
 build-mode = "apk"
-included-patches = "compact-header predictive-back-gesture remove-screenshot-restriction"
+included-patches = "debug-mode predictive-back-gesture remove-screenshot-restriction"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
 
 [TikTok]
-included-patches = ""
+included-patches = "sim-spoof predictive-back-gesture remove-screenshot-restriction"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 
@@ -74,7 +74,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/citra-emulator/citra-emulator/"
 [Backdrops]
 app-name = "Backdrops"
 enabled = true
-included-patches = ""
+included-patches = "predictive-back-gesture remove-screenshot-restriction"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers/"
 arch = "any"
 
