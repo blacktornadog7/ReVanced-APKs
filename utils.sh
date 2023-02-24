@@ -317,7 +317,7 @@ build_rv() {
 			elif [ "$arch" = "arm-v7a" ]; then
 				apkm_arch="armeabi-v7a"
 			elif [ "$arch" = "any" ]; then
-				apkmirror_regex='arm64-v8a + x86 + x86_64</div>[^@]*@\([^"]*\)'
+				apkm_arch="arm64-v8a + x86 + x86_64"
 			fi
 			if ! dl_apkmirror "${args[apkmirror_dlurl]}" "$version" "$stock_apk" "$apkm_arch" "${args[dpi]}"; then
 				epr "ERROR: Could not find any release of '${app_name}' with version '${version}' and arch '${apkm_arch}' from APKMirror"
