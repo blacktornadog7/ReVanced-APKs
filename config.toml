@@ -112,6 +112,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/teslacoil-software/nova-launche
 [Android 12 Widgets]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/mohamed-ibrahem/android-12-clock-widgets/"
+arch = "any"
 merge-integrations = true
 
 [Yuka]
