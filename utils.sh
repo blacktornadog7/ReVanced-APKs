@@ -305,21 +305,23 @@ build_rv() {
 	fi
 	pr "Choosing version '${version}' (${app_name})"
 	local version_f=${version// /}
-	local stock_apk="${TEMP_DIR}/${pkg_name}-stock-${version_f}-${arch}.apk"
+	local stock_apk="${TEMP_DIR}/${pkg_name}-${version_f}-${arch}.apk"
 	if [ ! -f "$stock_apk" ]; then
 		if [ "$dl_from" = apkmirror ]; then
 			pr "Downloading '${app_name}' from APKMirror"
+			local apkm_arch
 			if [ "$arch" = "all" ]; then
-				apkmirror_regex="APK</span>[^@]*@\([^#]*\)"
+				apkm_arch="universal"
 			elif [ "$arch" = "arm64-v8a" ]; then
-				apkmirror_regex='arm64-v8a</div>[^@]*@\([^"]*\)'
+				apkm_arch="arm64-v8a"
 			elif [ "$arch" = "arm-v7a" ]; then
-				apkmirror_regex='armeabi-v7a</div>[^@]*@\([^"]*\)'
+				apkm_arch="armeabi-v7a"
 			elif [ "$arch" = "any" ]; then
-				apkmirror_regex='arm64-v8a + x86 + x86_64</div>[^@]*@\([^"]*\)'
+				apkm_arch="arm64-v8a + x86 + x86_64"
 			fi
-			if ! dl_apkmirror "${args[apkmirror_dlurl]}" "$version" "$apkmirror_regex" "$stock_apk"; then
-				abort "ERROR: Could not find any release of '${app_name}' with version '${version}' from APKMirror"
+			if ! dl_apkmirror "${args[apkmirror_dlurl]}" "$version" "$stock_apk" "$apkm_arch" "${args[dpi]}"; then
+				epr "ERROR: Could not find any release of '${app_name}' with version '${version}' and arch '${apkm_arch}' from APKMirror"
+				return 0
 			fi
 		elif [ "$dl_from" = uptodown ]; then
 			pr "Downloading '${app_name}' from Uptodown"
