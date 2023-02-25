@@ -19,6 +19,7 @@ Reddit: 2023.05.0
 Twitch: 14.6.0  
 TikTok: 27.8.3  
 Backdrops (any): 5.0.7  
+Yuka: 4.27  
 
 Install [Vanced Microg](https://github.com/TeamVanced/VancedMicroG/releases) to be able to use non-root YouTube or Music  
 
