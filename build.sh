@@ -82,6 +82,7 @@ for table_name in $(toml_get_table_names); do
 			abort "ERROR: '${app_args[arch]}' is not a valid option for 'arch': only 'all', 'arm64-v8a', 'arm-v7a' 'any' is allowed"
 		fi
 	} || app_args[arch]="all"
+	app_args[merge_integrations]=$(toml_get "$t" merge-integrations) || app_args[merge_integrations]=false
 	app_args[module_prop_name]=$(toml_get "$t" module-prop-name) || {
 		app_name_l=${app_args[app_name],,}
 		if [ "${app_args[arch]}" = "all" ]; then
