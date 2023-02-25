@@ -106,3 +106,11 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/joaomgcd/tasker/"
 [Nova Launcher]
 enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/teslacoil-software/nova-launcher/"
+
+[Android 12 Widgets]
+enabled = false
+apkmirror-dlurl = ""
+
+[Yuka]
+enabled = true
+apkmirror-dlurl = "https://www.apkmirror.com/apk/yuka-apps/yuka-food-cosmetic-scan/"
