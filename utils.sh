@@ -176,7 +176,7 @@ isoneof() {
 dl_apkmirror() {
 	local url=$1 version=${2// /-} output=$3 arch=$4 dpi=$5
 	local resp node app_table dlurl=""
-	[ "$arch" = universal ] && apparch=(universal noarch APK 'arm64-v8a + armeabi-v7a' 'arm64-v8a + x86 + x86_64') || apparch=("$arch")
+	[ "$arch" = universal ] && apparch=('universal' 'noarch' 'APK' 'arm64-v8a + armeabi-v7a' 'arm64-v8a + x86 + x86_64') || apparch=("$arch")
 	url="${url}/${url##*/}-${version//./-}-release/"
 	resp=$(req "$url" -) || return 1
 	for ((n = 2; n < 50; n++)); do
@@ -311,7 +311,7 @@ build_rv() {
 			pr "Downloading '${app_name}' from APKMirror"
 			local apkm_arch
 			if [ "$arch" = "all" ]; then
-				apkm_arch="universal"
+				apkm_arch= 'universal' 'noarch' 'APK' 'arm64-v8a + armeabi-v7a' 'arm64-v8a + x86 + x86_64'
 			elif [ "$arch" = "arm64-v8a" ]; then
 				apkm_arch="arm64-v8a"
 			elif [ "$arch" = "arm-v7a" ]; then
