@@ -293,6 +293,11 @@ build_rv() {
 		p_patcher_args+=("-m ${RV_INTEGRATIONS_APK}")
 	fi
 
+	if jq -r ".[] | select(.compatiblePackages[].name==\"${pkg_name}\") | .dependencies[]" "$RV_PATCHES_JSON" | grep -qF integrations ||
+		[ "${args[merge_integrations]}" = true ]; then
+		p_patcher_args+=("-m ${RV_INTEGRATIONS_APK}")
+	fi
+
 	local microg_patch
 	microg_patch=$(jq -r ".[] | select(.compatiblePackages[].name==\"${pkg_name}\") | .name" "$RV_PATCHES_JSON" | grep -F microg || :)
 	if [ "$microg_patch" ]; then
