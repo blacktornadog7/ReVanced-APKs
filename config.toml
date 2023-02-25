@@ -71,11 +71,8 @@ enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/citra-emulator/citra-emulator/"
 
 [Backdrops]
-app-name = "Backdrops"
-enabled = true
+enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers/"
-arch = "any"
-merge-integrations = true
 
 [WarnWetter]
 enabled = false
@@ -114,5 +111,5 @@ enabled = false
 apkmirror-dlurl = ""
 
 [Yuka]
-enabled = true
+enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/yuka-apps/yuka-food-cosmetic-scan/"
