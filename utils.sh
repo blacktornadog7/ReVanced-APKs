@@ -311,7 +311,7 @@ build_rv() {
 			pr "Downloading '${app_name}' from APKMirror"
 			local apkm_arch
 			if [ "$arch" = "all" ]; then
-				apkm_arch="'universal' 'noarch' 'APK' 'arm64-v8a + armeabi-v7a' 'arm64-v8a + x86 + x86_64'"
+				apkm_arch="APK"
 			elif [ "$arch" = "arm64-v8a" ]; then
 				apkm_arch="arm64-v8a"
 			elif [ "$arch" = "arm-v7a" ]; then
