@@ -79,7 +79,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/citra-emulator/citra-emulator/"
 app-name = "Backdrops"
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers/"
-arch = "any"
+dpi = "480-640dpi"
 merge-integrations = true
 
 [WarnWetter]
@@ -117,7 +117,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/teslacoil-software/nova-launche
 [Android 12 Widgets]
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/mohamed-ibrahem/android-12-clock-widgets/"
-arch = "any"
 merge-integrations = true
 
 [Yuka]
