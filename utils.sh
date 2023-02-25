@@ -311,11 +311,15 @@ build_rv() {
 			pr "Downloading '${app_name}' from APKMirror"
 			local apkm_arch
 			if [ "$arch" = "all" ]; then
-				apkm_arch="APK"
+				apkm_arch="universal"
 			elif [ "$arch" = "arm64-v8a" ]; then
 				apkm_arch="arm64-v8a"
 			elif [ "$arch" = "arm-v7a" ]; then
 				apkm_arch="armeabi-v7a"
+			elif [ "$arch" = "any" ]; then
+				apkm_arch="arm64-v8a + x86 + x86_64"
+			elif [ "$arch" = "none" ]; then
+				apkm_arch="APK"
 			fi
 			if ! dl_apkmirror "${args[apkmirror_dlurl]}" "$version" "$stock_apk" "$apkm_arch" "${args[dpi]}"; then
 				epr "ERROR: Could not find any release of '${app_name}' with version '${version}' and arch '${apkm_arch}' from APKMirror"
