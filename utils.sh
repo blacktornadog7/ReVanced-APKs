@@ -176,7 +176,7 @@ isoneof() {
 dl_apkmirror() {
 	local url=$1 version=${2// /-} output=$3 arch=$4 dpi=$5
 	local resp node app_table dlurl=""
-	[ "$arch" = universal ] && apparch=(universal noarch 'arm64-v8a + armeabi-v7a') || apparch=("$arch")
+	[ "$arch" = universal ] && apparch=(universal noarch APK 'arm64-v8a + armeabi-v7a' 'arm64-v8a + x86 + x86_64') || apparch=("$arch")
 	url="${url}/${url##*/}-${version//./-}-release/"
 	resp=$(req "$url" -) || return 1
 	for ((n = 2; n < 50; n++)); do
@@ -316,8 +316,6 @@ build_rv() {
 				apkm_arch="arm64-v8a"
 			elif [ "$arch" = "arm-v7a" ]; then
 				apkm_arch="armeabi-v7a"
-			elif [ "$arch" = "any" ]; then
-				apkm_arch=" "
 			fi
 			if ! dl_apkmirror "${args[apkmirror_dlurl]}" "$version" "$stock_apk" "$apkm_arch" "${args[dpi]}"; then
 				epr "ERROR: Could not find any release of '${app_name}' with version '${version}' and arch '${apkm_arch}' from APKMirror"
