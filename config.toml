@@ -7,7 +7,7 @@ build-mindetach-module = false
 
 # add 'enabled = false' for not patching a specific app
 [YouTube]
-enabled = false
+enabled = true
 build-mode = "apk" # 'both', 'apk' or 'module'
 excluded-patches = "custom-branding remove-player-button-background" # whitespace seperated list of patches to exclude (multiline strings are not supported)
 included-patches = "" # whitespace seperated list of patches to include
@@ -17,7 +17,6 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 module-prop-name = "ytrv-magisk"
 
 [Music-arm64]
-enabled = false
 build-mode = "apk"
 app-name = "Music"
 excluded-patches = ""
@@ -39,28 +38,23 @@ module-prop-name = "ytmusicrv-arm-magisk"
 arch = "arm-v7a"
 
 [Twitter]
-enabled = false
 build-mode = "apk"
 excluded-patches = "hide-views-stats"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitter-inc/twitter/"
-merge-integrations = true
 
 [Reddit]
-enabled = false
 build-mode = "apk"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
 
 [Twitch]
-enabled = false
 build-mode = "apk"
 included-patches = "debug-mode"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
 
 [TikTok]
-enabled = false
 included-patches = "sim-spoof"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
@@ -80,8 +74,6 @@ app-name = "Backdrops"
 enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers/"
 arch = "any"
-dpi = "480-640dpi"
-merge-integrations = true
 
 [WarnWetter]
 enabled = false
@@ -114,13 +106,3 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/joaomgcd/tasker/"
 [Nova Launcher]
 enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/teslacoil-software/nova-launcher/"
-
-[Android 12 Widgets]
-enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/mohamed-ibrahem/android-12-clock-widgets/"
-arch = "APK"
-merge-integrations = true
-
-[Yuka]
-enabled = false
-apkmirror-dlurl = "https://www.apkmirror.com/apk/yuka-apps/yuka-food-cosmetic-scan/"
