@@ -34,21 +34,21 @@ jobs:
       - name: Generate release
         run: |
           version=${{ steps.version.outputs.versionr }}
-          echo -e "# ReVanced Patches\n" > release_notes.md
-          dateRevanced=$(date -u -d $(gh release view --json publishedAt -q .publishedAt --repo revanced/revanced-patches))
-          echo -e "\n Published on $dateRevanced\n" >> release_notes.md
-          gh release view --json body -q .body --repo revanced/revanced-patches >> release_notes.md
-          echo -e "\n---\n" >> release_notes.md
+          #echo -e "# ReVanced Patches\n" > release_notes.md
+          #dateRevanced=$(date -u -d $(gh release view --json publishedAt -q .publishedAt --repo revanced/revanced-patches))
+          #echo -e "\n Published on $dateRevanced\n" >> release_notes.md
+          #gh release view --json body -q .body --repo revanced/revanced-patches >> release_notes.md
+          #echo -e "\n---\n" >> release_notes.md
           echo -e "# RVX Patches\n" >> release_notes.md
           dateRex=$(date -u -d $(gh release view --json publishedAt -q .publishedAt --repo inotia00/revanced-patches))
           echo -e "\n Published on $dateRex\n" >> release_notes.md
           gh release view --json body -q .body --repo inotia00/revanced-patches >> release_notes.md
           echo -e "\n---\n" >> release_notes.md
-          echo -e "# Anddea Patches\n" >> release_notes.md
-          dateAnddea=$(date -u -d $(gh release view --json publishedAt -q .publishedAt --repo anddea/revanced-patches))
-          echo -e "\n Published on $dateAnddea\n" >> release_notes.md
-          gh release view --json body -q .body --repo anddea/revanced-patches >> release_notes.md
-          echo -e "\n---\n" >> release_notes.md
+          #echo -e "# Anddea Patches\n" >> release_notes.md
+          #dateAnddea=$(date -u -d $(gh release view --json publishedAt -q .publishedAt --repo anddea/revanced-patches))
+          #echo -e "\n Published on $dateAnddea\n" >> release_notes.md
+          #gh release view --json body -q .body --repo anddea/revanced-patches >> release_notes.md
+          #echo -e "\n---\n" >> release_notes.md
           echo -e "\nUse [MicroG](https://github.com/ReVanced/GmsCore/releases/latest) for YouTube and Music" >> release_notes.md
           sed -i "1s/^/Release $version\n\n/" release_notes.md
           gh release create "$version" --draft -t "$version" -F release_notes.md
@@ -63,40 +63,40 @@ jobs:
         include:
           - id: "YouTube-Extended"
           - id: "Music-Extended"
-          - id: "Reddit-Extended"
-          - id: "YouTube-anddea"
-          - id: "Music-anddea"
-          - id: "YouTube"
-          - id: "Music"
-          - id: "Twitter"
-          - id: "Twitch"
-          - id: "TikTok"
-          - id: "Reddit"
-          - id: "Messenger"
-          - id: "Facebook"
-          - id: 'Spotify'
-          - id: "Spotify-Lite"
-          #   - id: "Citra"
-          #   - id: "Backdrops"
-          #   - id: "WarnWetter"
-          #   - id: "Windyapp"
-          - id: "MyExpenses"
-          - id: "NyxMusicPlayer"
-          - id: "IconPackStudio"
-          - id: "TickTick"
-          - id: "Tasker"
-          - id: "Photomath"
-          # - id: "Instagram-armeabi-v7a"
-          - id: "Instagram"
-          - id: "InShorts"
-          #   - id: "SyncForReddit"
-          - id: "InfinityForReddit"
-          - id: "VSCO"
-          - id: "Pixiv"
-          #   - id: "Trakt"
-          - id: "MemeGenerator"
-          - id: "Lightroom"
-          - id: "Tumblr"
+          #- id: "Reddit-Extended"
+          #- id: "YouTube-anddea"
+          #- id: "Music-anddea"
+          #- id: "YouTube"
+          #- id: "Music"
+          #- id: "Twitter"
+          #- id: "Twitch"
+          #- id: "TikTok"
+          #- id: "Reddit"
+          #- id: "Messenger"
+          #- id: "Facebook"
+          #- id: 'Spotify'
+          #- id: "Spotify-Lite"
+          #- id: "Citra"
+          #- id: "Backdrops"
+          #- id: "WarnWetter"
+          #- id: "Windyapp"
+          #- id: "MyExpenses"
+          #- id: "NyxMusicPlayer"
+          #- id: "IconPackStudio"
+          #- id: "TickTick"
+          #- id: "Tasker"
+          #- id: "Photomath"
+          #- id: "Instagram-armeabi-v7a"
+          #- id: "Instagram"
+          #- id: "InShorts"
+          #- id: "SyncForReddit"
+          #- id: "InfinityForReddit"
+          #- id: "VSCO"
+          #- id: "Pixiv"
+          #- id: "Trakt"
+          #- id: "MemeGenerator"
+          #- id: "Lightroom"
+          #- id: "Tumblr"
 
     env:
       RELEASE_VERSION: ${{ needs.generate-release.outputs.version }}
