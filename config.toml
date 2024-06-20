@@ -1,4 +1,4 @@
-enable-magisk-update = true # set this to false if you do not want to receive updates for the module in magisk app
+enable-magisk-update = false # set this to false if you do not want to receive updates for the module in magisk app
 
 # add 'enabled = false' for not patching a specific app or remove it from the config
 # see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
@@ -6,119 +6,113 @@ enable-magisk-update = true # set this to false if you do not want to receive up
 # you can use rvmm-config-gen to generate a config
 
 [YouTube]
+enabled = false
 build-mode = "apk"
 excluded-patches = ""
 included-patches = ""
 version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube" 
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 
 [Music]
+enabled = false
 build-mode = "apk"
 version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
-arch = "both"
-
-[Music-Extended]
-app-name = "Music"
-patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
-cli-source = "inotia00/revanced-cli"
-rv-brand = "ReVanced Extended"
-build-mode = "apk"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 arch = "both"
 
 [YouTube-Extended]
 app-name = "YouTube"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
-cli-source = "inotia00/revanced-cli"
 rv-brand = "ReVanced Extended"
-build-mode = "apk"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube" 
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
-[Reddit-Extended]
-patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
-cli-source = "inotia00/revanced-cli"
-rv-brand = "ReVanced Extended"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
-
-[Music-anddea]
-enabled = true
+[Music-Extended]
 app-name = "Music"
-version = "auto"
-patches-source = "anddea/revanced-patches"
-integrations-source = "anddea/revanced-integrations"
-rv-brand = "anddea"
-build-mode = "apk"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
-uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
-arch = "both"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
+patches-source = "inotia00/revanced-patches"
+integrations-source = "inotia00/revanced-integrations"
+rv-brand = "ReVanced Extended"
+arch = "arm64-v8a"
 
-[YouTube-anddea]
-enabled = true
+[YouTube-anddea-old]
+enabled = false
 app-name = "YouTube"
-version = "auto"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "anddea/revanced-patches"
 integrations-source = "anddea/revanced-integrations"
 rv-brand = "anddea"
-build-mode = "apk"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube" 
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+build-mode = "both"
+module-prop-name = "YouTube-anddea"
+included-patches = "'Custom branding heading' 'Custom branding icon YouTube' 'Custom branding name YouTube' 'Enable debug logging' 'Settings icons' 'Change player flyout panel toggles' 'Hide player buttons background' 'Spoof player parameters'"
+excluded-patches = "'Tuck away preferences' 'Add splash animation' 'Shorts overlay buttons'"
 
-[Twitter]
-build-mode = "apk"
-version = "latest"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-uptodown-dlurl = "https://twitter.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
-arch = "all"
-
-[Twitch]
-enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
-uptodown-dlurl = "https://twitch.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/tv.twitch.android.app"
+[Music-anddea-old]
+enabled = false
+app-name = "Music"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
+patches-source = "anddea/revanced-patches"
+integrations-source = "anddea/revanced-integrations"
+rv-brand = "anddea"
 arch = "both"
+build-mode = "both"
+module-prop-name = "Music-anddea"
+included-patches = "'Custom branding icon YouTube Music' 'Custom branding name YouTube Music' 'Enable color match player' 'Enable debug logging' 'Enable old player background' 'Enable zen mode' 'Replace cast button' 'Enable old style miniplayer'"
 
-[TikTok]
+[Messenger]
+enabled = false
+# apkmirror-dlurl = "https://apkmirror.com/apk/facebook-2/messenger/"
+uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
+# arch = "both"
+
+[Tiktok]
+enabled = false
 version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
+# uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 # arch = "armeabi-v7a, arm64-v8a"
 included-patches = "'SIM spoof'"
 
-[Reddit]
-version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
-uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
+[Twitch]
+enabled = false
+# apkmirror-dlurl = "https://apkmirror.com/apk/twitch-interactive-inc/twitch/"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/tv.twitch.android.app"
+uptodown-dlurl = "https://twitch.en.uptodown.com/android"
+arch = "both"
+included-patches = "'Debug mode'"
 
-[Messenger]
-enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger/"
-uptodown-dlurl = "https://facebook-messenger.en.uptodown.com/android"
-# arch = "armeabi-v7a"
+[Instagram]
+enabled = false
+version = "auto"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.instagram.android"
+# uptodown-dlurl = "https://instagram.en.uptodown.com/android"
+# arch = "arm64-v8a"
+apkmirror-dlurl = "https://apkmirror.com/apk/instagram/instagram-instagram/"
+arch = "both"
+
+[Reddit]
+enabled = false
+version = "auto"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
+uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
+# apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
+
+[Twitter]
+enabled = false
+build-mode = "apk"
+version = "latest"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.twitter.android"
+# uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+arch = "all"
 
 [Facebook]
-enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
+enabled = false
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/facebook/"
 uptodown-dlurl = "https://facebook.en.uptodown.com/android"
-# arch = "armeabi-v7a"
+# arch = "both"
 
 [Spotify]
 enabled = false
@@ -127,7 +121,7 @@ version = "auto"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 
 [Spotify-Lite]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 uptodown-dlurl = "https://spotify-lite.en.uptodown.com/android"
@@ -137,102 +131,189 @@ enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/citra-emulator/citra-emulator/"
 arch = "arm64-v8a"
 
-[Backdrops]
+[Tumblr]
 enabled = false
-version = "auto"
-uptodown-dlurl = "https://backdrops.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/tumblr-inc/tumblr/"
+uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
 
-[WarnWetter]
-enabled = false
-apkmirror-dlurl = "https://www.apkmirror.com/apk/deutscher-wetterdienst/warnwetter/"
-
-[Windyapp]
-enabled = false
-apkmirror-dlurl = "https://www.apkmirror.com/apk/windy-weather-world-inc/windy-wind-weather-forecast/"
-
-[MyExpenses]
-enabled = true
-version = "auto"
-uptodown-dlurl = "https://my-expenses.en.uptodown.com/android"
+[NFCTools]
+uptodown-dlurl = "https://nfc-tools.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/wakdev/nfc-tools/"
 
 [NyxMusicPlayer]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 uptodown-dlurl = "https://nyx-music-player.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/viralmedia-mlm/nyx-music-player/"
 arch = "both"
+
+[Lightroom]
+enabled = false
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/adobe/lightroom/"
+uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
+arch = "both"
+
+[Strava]
+enabled = false
+# uptodown-dlurl = "https://strava.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/strava-inc/strava-running-and-cycling-gps/"
+
+[NetGuard]
+enabled = false
+uptodown-dlurl = "https://netguard.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/marcel-bokhorst/netguard-no-root-firewall/"
+included-patches = "'Remove broadcasts restriction'"
+
+[DigitalesAmt]
+enabled = false
+uptodown-dlurl = "https://digitales-amt.en.uptodown.com/android"
+
+[VSCO]
+enabled = false
+uptodown-dlurl = "https://vsco-cam.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/vsco/vsco-cam/"
+arch = "both"
+
+[HexEditor]
+enabled = false
+apkmonk-dlurl = "https://www.apkmonk.com/app/com.myprog.hexedit/"
+
+[SPBServiceportalBund]
+enabled = false
+apkmonk-dlurl = "https://www.apkmonk.com/app/at.gv.bka.serviceportal/"
 
 [IconPackStudio]
-enabled = true
+enabled = false
 version = "auto"
 uptodown-dlurl = "https://icon-pack-studio.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/smart-launcher-team/icon-pack-studio/"
 
-[TickTick]
-enabled = true
+[MyExpenses]
+enabled = false
 version = "auto"
-uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
+uptodown-dlurl = "https://my-expenses.en.uptodown.com/android"
+
+[Inshorts]
+enabled = false
+version = "auto"
+# uptodown-dlurl = "https://inshorts.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/inshorts-formerly-news-in-shorts/inshorts-news-in-60-words-2/"
 arch = "both"
 
-[Tasker]
-enabled = true
-uptodown-dlurl = "https://tasker.en.uptodown.com/android"
+[InfinityForReddit]
+enabled = false
+version = "auto"
+uptodown-dlurl = "https://infinity-for-reddit.en.uptodown.com/android"
+
+[CandyLinkVPN]
+uptodown-dlurl = "https://candylink-vpn.en.uptodown.com/android"
+# apkmonk-dlurl = "https://www.apkmonk.com/app/com.candylink.openvpn/"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/liondev-io/candylink-vpn/"
+
+[pixiv]
+enabled = false
+version = "auto"
+uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/pixiv-inc/pixiv/"
+
+[TUDortmund]
+enabled = false
+uptodown-dlurl = "https://tu-dortmund.en.uptodown.com/android"
+
+[Windyapp]
+enabled = false
+uptodown-dlurl = "https://windy.en.uptodown.com/android"
+# apkmonk-dlurl = "https://www.apkmonk.com/app/co.windyapp.android/"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/windy-weather-world-inc/windy-wind-weather-forecast/"
+arch = "arm64-v8a"
+
+[Yuka]
+enabled = false
+# apkmonk-dlurl = "https://www.apkmonk.com/app/io.yuka.android/"
+uptodown-dlurl = "https://yuka.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/yuka-apps/yuka-food-cosmetic-scan/"
+# arch = "arm64-v8a"
+
+[GoogleRecorder]
+enabled = false
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/google-recorder/"
+# uptodown-dlurl = "https://opnemer.en.uptodown.com/android"
+# arch = "arm64-v8a"
 
 [Photomath]
 enabled = false
 apkmonk-dlurl = "https://www.apkmonk.com/app/com.microblink.photomath/"
 
-[Instagram]
-enabled = true
-version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/instagram/instagram-instagram/"
-uptodown-dlurl = "https://instagram.en.uptodown.com/android"
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.instagram.android"
-arch = "both"
-
-[InShorts]
-enabled = true
-version = "auto"
-uptodown-dlurl = "https://inshorts.en.uptodown.com/android"
-arch = "both"
-
-[SyncForReddit]
-enabled = false
-version = "auto"
-uptodown-dlurl = "https://sync-for-reddit.en.uptodown.com/android"
-
-[InfinityForReddit]
-enabled = true
-version = "auto"
-uptodown-dlurl = "https://infinity-for-reddit.en.uptodown.com/android"
-
-[VSCO]
-enabled = true
-version = "auto"
-uptodown-dlurl = "https://vsco-cam.en.uptodown.com/android"
-arch = "both"
-
-[Pixiv]
-enabled = true
-version = "auto"
-uptodown-dlurl = "https://pixiv.en.uptodown.com/android"
-
 [Trakt]
 enabled = false
-version = "auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt/"
+# apkmirror-dlurl = "https://www.apkmonk.com/app/tv.trakt.trakt/"
 # uptodown-dlurl = "https://trakt.en.uptodown.com/android"
 
-[MemeGenerator]
-enabled = true
+[Backdrops]
+enabled = false
 version = "auto"
-uptodown-dlurl = "https://meme-generator-free.en.uptodown.com/android"
+uptodown-dlurl = "https://backdrops.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers/"
+# arch = "arm64-v8a"
 
-[Lightroom]
-enabled = true
-version = "auto"
-uptodown-dlurl = "https://adobe-lightroom-mobile.en.uptodown.com/android"
+[irplus]
+enabled = false
+uptodown-dlurl = "https://irplus.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/binarymode/irplus-infrared-remote/"
+
+[MemeGenerator]
+enabled = false
+apkmirror-dlurl = "https://www.apkmirror.com/apk/zombodroid/meme-generator-free/"
+# uptodown-dlurl = "https://meme-generator-free.en.uptodown.com/android"
+
+[CieID]
+enabled = false
+uptodown-dlurl = "https://cieid.en.uptodown.com/android"
+
+[SolidExplorer]
+enabled = false
+uptodown-dlurl = "https://solid-explorer-file-manager.en.uptodown.com/android"
+# apkmonk-dlurl = "https://www.apkmonk.com/app/pl.solidexplorer2/"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/neatbytes/solid-explorer-beta/"
 arch = "both"
 
-[Tumblr]
-enabled = true
+[WarnWetter]
+enabled = false
+uptodown-dlurl = "https://warnwetter.en.uptodown.com/android"
+# apkmirror-dlurl = "https://www.apkmonk.com/app/de.dwd.warnapp/"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/deutscher-wetterdienst/warnwetter/"
+
+[SCBEASY]
+enabled = false
+uptodown-dlurl = "https://scb-easy.en.uptodown.com/android"
+included-patches = "'Remove debugging detection'"
+
+[SonyHeadphonesConnect]
+enabled = false
+uptodown-dlurl = "https://sony-headphones-connect.en.uptodown.com/android"
+# apkmonk-dlurl = "https://www.apkmonk.com/app/com.sony.songpal.mdr/"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/sony-corporation/sony-headphones-connect/"
+# arch = "arm64-v8a"
+
+[MyFitnessPal]
+enabled = false
+uptodown-dlurl = "https://calorie-counter-myfitnesspal.en.uptodown.com/android/download"
+# apkmonk-dlurl = "https://www.apkmonk.com/app/com.myfitnesspal.android/"
+# apkmirror-dlurl = "https://www.apkmirror.com/apk/myfitnesspal-inc/calorie-counter-myfitnesspal/"
+
+[TickTick]
+enabled = false
 version = "auto"
-uptodown-dlurl = "https://tumblr.en.uptodown.com/android"
+# uptodown-dlurl = "https://ticktick.en.uptodown.com/android"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/ticktick-limited/ticktick-to-do-list-with-reminder-day-planner/"
+arch = "both"
+
+[Tasker]
+enabled = false
+uptodown-dlurl = "https://tasker.en.uptodown.com/android"
+
+[YouTubeVanced]
+enabled = false
+uptodown-dlurl = "https://youtube-vanced.en.uptodown.com/android"
