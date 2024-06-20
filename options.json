@@ -1,1 +1,39 @@
-[]
+        
+[
+  {
+    "patchName": "Custom package name",
+    "options": [
+      {
+        "key": "PackageNameYouTube",
+        "value": "app.rvx.android.youtube"
+      },
+      {
+        "key": "PackageNameYouTubeMusic",
+        "value": "app.rvx.android.apps.youtube.music"
+      }
+    ]
+  },
+  {
+    "patchName": "Custom Shorts action buttons",
+    "options": [
+      {
+        "key": "IconType",
+        "value": "outline"
+      }
+    ]
+  },
+  {
+    "patchName": "Custom package name",
+    "options": [
+      {
+        "key": "PackageNameYouTube",
+        "value": "app.rvx.android.youtube"
+      },
+      {
+        "key": "PackageNameYouTubeMusic",
+        "value": "app.rvx.android.apps.youtube.music"
+      }
+    ]
+  }
+]
+        
