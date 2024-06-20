@@ -37,7 +37,7 @@ integrations-source = "inotia00/revanced-integrations"
 rv-brand = "ReVanced Extended"
 arch = "arm64-v8a"
 
-[YouTube-anddea-old]
+[YouTube-anddea]
 enabled = false
 app-name = "YouTube"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
@@ -49,7 +49,7 @@ module-prop-name = "YouTube-anddea"
 included-patches = "'Custom branding heading' 'Custom branding icon YouTube' 'Custom branding name YouTube' 'Enable debug logging' 'Settings icons' 'Change player flyout panel toggles' 'Hide player buttons background' 'Spoof player parameters'"
 excluded-patches = "'Tuck away preferences' 'Add splash animation' 'Shorts overlay buttons'"
 
-[Music-anddea-old]
+[Music-anddea]
 enabled = false
 app-name = "Music"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
