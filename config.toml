@@ -28,6 +28,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "ReVanced Extended"
+included-patches = "'Alternative thumbnails' 'Ambient mode control' 'Change Shorts repeat state' 'Change player flyout menu toggles' 'Change start page' 'Custom Shorts action buttons' 'Custom branding icon for YouTube' 'Custom branding name for YouTube' 'Custom double tap length' 'Custom header for YouTube' 'Custom package name' 'Description components' 'Disable QUIC protocol' 'Disable auto audio tracks' 'Disable auto captions' 'Disable haptic feedback' 'Disable resuming Shorts on startup' 'Disable splash animation' 'Enable OPUS codec' 'Enable debug logging' 'Enable external browser' 'Enable gradient loading screen' 'Enable open links directly' 'Fullscreen components' 'GmsCore support' 'Hide action buttons' 'Hide ads' 'Hide comments components' 'Hide feed components' 'Hide feed flyout menu' 'Hide layout components' 'Hide player buttons' 'Hide player flyout menu' 'Layout switch' 'Miniplayer' 'Navigation bar components' 'Overlay buttons' 'Player components' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Return YouTube Dislike' 'Sanitize sharing links' 'Seekbar components' 'Settings for YouTube' 'Shorts components' 'SponsorBlock' 'Spoof app version' 'Spoof client' 'Swipe controls' 'Theme' 'Toolbar components' 'Translations for YouTube' 'Video playback' 'Visual preferences icons'"
 
 [Music-Extended]
 app-name = "Music"
@@ -36,6 +37,7 @@ patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "ReVanced Extended"
 arch = "arm64-v8a"
+included-patches = "'Amoled' 'Bitrate default value' 'Certificate spoof' 'Change start page' 'Custom branding icon for YouTube Music' 'Custom branding name for YouTube Music' 'Custom header for YouTube Music' 'Custom package name' 'Disable auto captions' 'Disable dislike redirection' 'Enable OPUS codec' 'Enable debug logging' 'Enable landscape mode' 'Flyout menu components' 'GmsCore support' 'Hide account components' 'Hide action bar components' 'Hide ads' 'Hide layout components' 'Navigation bar components' 'Player components' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Restore old style library shelf' 'Return YouTube Dislike' 'Sanitize sharing links' 'Settings for YouTube Music' 'SponsorBlock' 'Spoof app version' 'Translations for YouTube Music' 'Video playback'"
 
 [YouTube-anddea]
 enabled = false
