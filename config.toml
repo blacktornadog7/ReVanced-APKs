@@ -36,6 +36,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "ReVanced Extended"
+arch = "both"
 included-patches = "'Amoled' 'Bitrate default value' 'Certificate spoof' 'Change start page' 'Custom branding icon for YouTube Music' 'Custom branding name for YouTube Music' 'Custom header for YouTube Music' 'Custom package name' 'Disable auto captions' 'Disable dislike redirection' 'Enable OPUS codec' 'Enable debug logging' 'Enable landscape mode' 'Flyout menu components' 'Hide account components' 'Hide action bar components' 'Hide ads' 'Hide layout components' 'Navigation bar components' 'Player components' 'Remove background playback restrictions' 'Remove viewer discretion dialog' 'Restore old style library shelf' 'Return YouTube Dislike' 'Sanitize sharing links' 'Settings for YouTube Music' 'SponsorBlock' 'Spoof app version' 'Translations for YouTube Music' 'Video playback'"
 
 [YouTube-anddea]
