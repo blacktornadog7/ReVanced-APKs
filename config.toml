@@ -24,7 +24,6 @@ arch = "both"
 
 [YouTube-Extended]
 app-name = "YouTube"
-build-mode = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
@@ -33,7 +32,6 @@ included-patches = "'Alternative thumbnails' 'Ambient mode control' 'Change Shor
 
 [Music-Extended]
 app-name = "Music"
-build-mode = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
