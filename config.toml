@@ -33,3 +33,4 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 enabled = true
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
 included-patches = "'SIM spoof'"
+version = "latest"
