@@ -14,7 +14,7 @@
   "patchName" : "Custom branding icon for YouTube Music",
   "options" : [ {
     "key" : "appIcon",
-    "value" : "revancify_blue"
+    "value" : "revancify_red"
   }, {
     "key" : "changeSplashIcon",
     "value" : true
@@ -128,13 +128,13 @@
   "patchName" : "Custom Shorts action buttons",
   "options" : [ {
     "key" : "iconType",
-    "value" : "cairo"
+    "value" : "youtubeoutline"
   } ]
 }, {
   "patchName" : "Custom branding icon for YouTube",
   "options" : [ {
     "key" : "appIcon",
-    "value" : "revancify_blue"
+    "value" : "revancify_red"
   }, {
     "key" : "changeSplashIcon",
     "value" : true
